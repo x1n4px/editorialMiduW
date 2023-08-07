@@ -1,0 +1,57 @@
+<div class="container">
+  <div class="interno">
+    <div class="listado" [ngClass]="{'div-regular-listado': !isAmpliado, 'div-ampliado-listado': isAmpliado}">
+      <header>
+        <span id="librosTotales">{{librosF.length}} libros disponibles</span>
+
+        <div class="filtros">
+          <div class="paginas">
+            <span>Filtrar por páginas</span>
+            <input [(ngModel)]="rango" (input)="filtrarDatos()" type="range" name="numeroPaginas" id="numeroPaginas" [min]="numMinimoPagina" [max]="numMaximoPagina" step="30" [value]="rango">
+            <span>Paginas seleccionadas: {{rango}}</span>
+          </div>
+          <div class="genero">
+            <span>Filtrar por géneros</span>
+             <select id="opciones" [(ngModel)]="opcionSeleccionada" (change)="filtrarTipo()">
+              <option value="Todas">Todas</option>
+              <option value="Terror">Terror</option>
+              <option value="Ciencia ficción">Ciencia ficción</option>
+              <option value="Zombies">Zombies</option>
+              <option value="Fantasía">Fantasía</option>
+            </select>
+          </div>
+        </div>
+      </header>
+      <div class="cardContainer">
+        <div class="cards" *ngFor="let libro of librosF">
+          <a class="aCard" [href]="libro.book.title">
+            <img [src]="libro.book.cover" alt="">
+
+          </a>
+          <div class="botonLectura">
+            <button (click)="accionLista(libro)">
+              {{ estaEnLista(libro) ? 'Eliminar' : 'Añadir' }}
+            </button>
+          </div>
+        </div>
+      </div>
+
+    </div>
+    <div [ngClass]="{'div-regular': !isAmpliado, 'div-ampliado': isAmpliado}" >
+      <div class="ampliable">
+        <button class="btnAmpliable" (click)="cambiarTamanio()">
+          <p [ngClass]="{'texto-vertical': !isAmpliado, 'texto-normal': isAmpliado}">{{isAmpliado ? 'Lista de lectura':'Lista de lectura'}}</p>
+
+        </button>
+      </div>
+      <div class="cardContainerLista" *ngIf="isAmpliado">
+        <div class="cards" *ngFor="let libro of librosLista">
+          <img [src]="libro.book.cover" alt="">
+          <div class="botonLectura">
+            <button (click)="quitar(libro)">Quitar</button>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

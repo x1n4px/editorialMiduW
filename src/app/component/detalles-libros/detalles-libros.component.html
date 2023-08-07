@@ -1,0 +1,24 @@
+<div class="container">
+  <div class="interno">
+    <button routerLink="">Volver</button>
+    <div class="book-info">
+      <div class="imgCov">
+        <img [src]="libro.book.cover" alt="">
+      </div>
+      <div class="text">
+        <h1>{{libro.book.title}}</h1>
+        <h3>{{libro.book.author.name}}</h3>
+        <p><strong>Sinopsis:</strong> {{libro.book.synopsis}}</p>
+        <p><strong>Año:</strong>{{libro.book.year}}</p>
+        <p><strong>Genero:</strong>{{libro.book.genre}}</p>
+      </div>
+
+    </div>
+    <div class="otrosLibros">
+      <h3>Otros libros del mismo autor</h3>
+      <div *ngFor="let otros of libro.book.author.otherBooks">
+        <p>{{otros}}</p>
+      </div>
+    </div>
+  </div>
+</div>

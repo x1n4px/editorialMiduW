@@ -1,0 +1,44 @@
+.container {
+  display: flex;
+  justify-content: center;
+  margin: 30px;
+}
+
+
+.interno {
+   width: 80%;
+}
+
+.book-info {
+  display: flex;
+  justify-content: center;
+}
+
+.text {
+  width: 80%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 50px;
+}
+
+p {
+  padding-inline: 100px;
+  padding-top: 20px;
+}
+
+.otrosLibros{
+  padding-top: 50px;
+  display: flex;
+   justify-content: center;
+   align-items: center;
+   flex-direction: column;
+}
+
+.imgCov {
+  width: 400px;
+}
+
+.imgCov img {
+  width: 100%;
+}

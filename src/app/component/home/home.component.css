@@ -1,0 +1,191 @@
+.container {
+  width: 100%;
+  height: auto;
+  min-height: 100vh;
+  display: flex;
+  background-color: #F5F5F5;
+  overflow: hidden;
+}
+
+.interno {
+  display: flex;
+  width: 100%;
+  height: 100%;
+}
+
+
+.div-ampliado-listado {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.div-regular-listado {
+  width: 95%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.listado header {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-direction: column;
+}
+
+
+
+.cardContainer {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.cardContainerLista {
+  width: 80%;
+  height: auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: flex-start;
+ }
+
+.cards {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.cardsLista {
+  width: 150px;
+  height: 200px;
+  margin: 10px;
+  display: flex;
+  justify-content: center;
+  position: relative;
+}
+
+.aCard {
+ position: relative;
+ display: flex;
+ justify-content: center;
+}
+
+
+.cards img {
+  height: 100%;
+  width: auto;
+  object-fit: contain;
+}
+
+.botonLectura {
+  position: absolute;
+  bottom: 10px;
+  display: none;
+}
+
+.cards:hover .botonLectura {
+  display: block;
+}
+
+#librosTotales {
+  font-size: 2em;
+  text-align: center;
+  padding: 30px;
+  border-bottom: 2px solid #3F51B5;
+
+}
+
+.filtros {
+  display: flex;
+  justify-content: space-around;
+}
+
+.paginas,
+.genero {
+  margin: 20px;
+  height: auto;
+  width: 30%;
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+}
+
+.paginas span,
+.genero span {
+  margin: 10px;
+}
+
+.div-regular {
+  width: 5%;
+  height: auto;
+  min-height: 100vh;
+  background-color: #222;
+  transition: width 0.5s;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+}
+
+.div-ampliado {
+  width: 40%;
+  background-color: #222;
+  transition: width 0.5s;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.texto-vertical {
+  writing-mode: vertical-rl;
+  transform: rotate(180deg);
+  font-size: 3em;
+  margin-top: 50px;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+  transition: width 0.5s;
+
+}
+
+.texto-normal {
+  writing-mode: horizontal-tb;
+  font-size: 3em;
+  text-align: center;
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+  color: whitesmoke;
+}
+
+
+button {
+  padding: 5px 20px;
+  background-color: #757de8;
+  color: #F5F5F5;
+  border: 2px solid #3F51B5;
+  border-radius: 10px;
+}
+
+button:hover {
+  transform: scale(1.1);
+  background-color: #3F51B5;
+}
+
+
+.btnAmpliable{
+  background-color: transparent;
+  border: none;
+}
+.btnAmpliable:hover {
+  transform: scale(1);
+  background-color: transparent;
+  border: none;
+}
